@@ -39,6 +39,11 @@ Item {
 
     Layout.preferredHeight: Layout.minimumHeight
 
+    FontLoader {
+            id: doppioOneRegular
+            source: "../fonts/Doppio_One/DoppioOne-Regular.ttf"
+        }
+        
     function addSource(source1, friendlyName1, source2, friendlyName2) {
         var found = false;
         for (var i = 0; i < sourcesModel.count; ++i) {
@@ -133,6 +138,8 @@ Item {
 
     PlasmaExtras.Heading {
         id: heading
+        font { family: doppioOneRegular.name; pointSize: 12 }
+        color: "#ffdd55"
         width: parent.width
         level: 2
         text: plasmoid.title

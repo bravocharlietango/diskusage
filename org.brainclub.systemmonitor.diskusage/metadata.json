@@ -2,8 +2,8 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Email": "k6bct@outlook.com",
+                "Name": "Bradley Tompkins"
             }
         ],
         "Category": "System Information",
@@ -66,9 +66,9 @@
             "desktop"
         ],
         "Icon": "drive-harddisk",
-        "Id": "org.kde.plasma.systemmonitor.diskusage",
+        "Id": "org.brainclub.systemmonitor.diskusage",
         "License": "GPL-2.0+",
-        "Name": "Hard Disk Space Usage",
+        "Name": "Disk Space Usage",
         "Name[ar]": "استخدام مساحة القرص الصلب",
         "Name[bs]": "Iskorisenost Hard diska",
         "Name[ca@valencia]": "Ús d'espai de disc dur",

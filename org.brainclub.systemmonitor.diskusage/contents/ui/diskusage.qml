@@ -28,6 +28,8 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 Applet {
     id: root
+    
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     onSourceAdded: {
         var match = source.match(/^partitions(.+)\/filllevel/);
@@ -38,11 +40,23 @@ Applet {
     }
 
     delegate: Item {
+    
+        FontLoader {
+            id: doppioOneRegular
+            source: "../fonts/Doppio_One/DoppioOne-Regular.ttf"
+        }
+        
         Layout.fillWidth: true
         Layout.fillHeight: true
+        
+    
+        
         PlasmaComponents.Label {
             id: label
             text: model.friendlyName1
+            font { family: doppioOneRegular.name; pointSize: 10 }
+            color:"#ffdd55"
+            font.bold: true
             anchors {
                 left: parent.left
                 bottom: progressBar.top
@@ -50,6 +64,9 @@ Applet {
         }
         PlasmaComponents.Label {
             id: freeSpace
+            font.bold: true
+            font { family: doppioOneRegular.name; pointSize: 10 }
+            color: "white"
             anchors {
                 right: parent.right
                 bottom: progressBar.top
@@ -65,6 +82,7 @@ Applet {
                 bottom: parent.bottom
             }
         }
+        
         Connections {
             target: model.dataSource
             onNewData: {
